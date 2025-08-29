@@ -1,0 +1,18 @@
+(Aca vmos a decir que ptas vamos a hacer, como ptas, y  en que tiempos)
+
+1. idea
+	1.1 Juego de escondidas multijugador ambientado en una oficina en pixelart para navegador
+
+2. plataforma
+	2.1 navegador (Web)
+
+3 lenguajes a usar y porque
+
+	3.1 HTML5
+		3.1.1 porque: porque no?
+	3.2 CSS3
+		3.2.1 porque: porque no?
+	3.3 JAVASCRIPT
+		3.3.1 porque: porque no?
+	3.4 NODE.JS
+		3.4.1 porque: porque no?
