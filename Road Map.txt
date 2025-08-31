@@ -19,3 +19,9 @@
 
 4. Crear el arbol de trabajo
 
+5. preparar area de trabajo
+	5.1 crear archivos base
+	5.2 colocar assets basicos en las carpetar (assets de prueba o assets finales)
+
+
+
