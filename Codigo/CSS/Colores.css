@@ -16,13 +16,17 @@ body { /* color de fondo */
   padding: 10px;
 }
 
+
+
 .pie { /* color de pie de pagina */
   background-color: #8B0000;
   color: white;
   text-align: center;
   padding: 10px;
   width: 100%;
+  position: below of juego;
   }
+
 
 
  canvas {
