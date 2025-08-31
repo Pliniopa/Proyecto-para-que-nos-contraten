@@ -21,7 +21,7 @@ var config = {
     type: Phaser.AUTO,
     width: 800,
     height: 600,
-    //parent: 'cuerpo1', //nombre del div donde se va a cargar el juego y aseguramiento del canva
+    parent: 'cuerpo1', //nombre del div donde se va a cargar el juego y aseguramiento del canva
     scene : {
         preload: preload, //funcion de precarga (carga en 2do plano)
         create: create, //funcion de creacion y  anandido de juego (inicia el juego)
