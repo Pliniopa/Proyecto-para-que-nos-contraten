@@ -1,0 +1,4 @@
+Aca van a ir todos los assets (imágenes) del escenario, o de los multiples escenarios a implementar en el jueguito
+
+
+porfa organizarlos en nombres de carpetas entendibles (de ejemplo se generaran 4 carpetas) y si es necesario generar un txt explicativo de cada uno

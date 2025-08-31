@@ -1,0 +1,3 @@
+en el documento Juego.html es el código principal, coloca aca el llamado a paginas secundarias, a CSS, JS, y node.JS, no rellenar con códigos que se puedan colocar en otro lado
+
+dentro de cada carpeta hay un .txt que explica por encimita que hace cada cosa, recomiendo leerlo
