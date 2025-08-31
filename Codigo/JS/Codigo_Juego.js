@@ -12,23 +12,44 @@ xa = 400; //ancho
 ya = 300; //alto
 
 // parametros de las plataformas
+// base
 xb = 400; //ancho
 yb = 568; //alto
 
+// intermedias
+xc = 600; //ancho
+yc = 400; //alto
+
+xd = 50; //ancho
+yd = 250; //alto
+
+
+xe = 750; //ancho
+ye = 120; //alto
+
+//parametros del jugador
+xj = 100; //ancho
+yj = 450; //alto
 
 
 var config = {
     type: Phaser.AUTO,
     width: 800,
     height: 600,
-    parent: 'cuerpo1', //nombre del div donde se va a cargar el juego y aseguramiento del canva
+    physics: { // creacion de fisicas de juego
+        default: 'arcade',
+        arcade: {
+            gravity: { y: 300 },
+            debug: false
+        }
+    },
+
     scene : {
         preload: preload, //funcion de precarga (carga en 2do plano)
         create: create, //funcion de creacion y  anandido de juego (inicia el juego)
         update: update //funcion de actualizacion (ciclo del juego)
     },
-    physics: {
-        default: 'arcade'}
+
 };
 
 var game = new Phaser.Game(config);
@@ -48,8 +69,34 @@ function preload() {
 
 function create() {
     this.add.image(xa, ya, "fondo"); // mostrar imagen de fondo en el navegador
-    this.add.image(xb, yb, 'Plataforma').setScale(2).refreshBody(); //mostrar plataforma en el navegador
+   
+    plataform = this.physics.add.staticGroup(); //agrega un grupo de plataformas estaticas (no se mueven)
+    plataform.create(xb, yb, 'Plataforma').setScale(2).refreshBody(); //crea la plataforma en la posicion indicada y la escala al doble de su tamaño original
+    //         crea_plataforma, pos_x, pos_y, nombre interno del asset, escala de la imagen, refresca el cuerpo fisico
+
+
+    plataform.create(xc, yc, 'Plataforma') //crea la plataforma en la posicion indicada y la escala al doble de su tamaño original
+    plataform.create(xd, yd, 'Plataforma') //crea la plataforma en la posicion indicada y la escala al doble de su tamaño original
+    plataform.create(xe, ye, 'Plataforma') //crea la plataforma en la posicion indicada y la escala al doble de su tamaño original
+
+    player = this.physics.add.sprite(xj, yj, 'dude'); //agrega al jugador
+//               crea_jugador, pos_x, pos_y, nombre interno del asset
+    // player.setBounce(0.2); //rebote del jugador
+
+    player.setCollideWorldBounds(true); //colision con los bordes del mundo
+
+    this.physics.add.collider(player, plataform); //colision entre el jugador y las plataformas
+
+
+
+
+
 }       
+
+
+
+
+
 
 function update() {
    
