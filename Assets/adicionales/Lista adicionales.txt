@@ -1,3 +1,6 @@
 Aca van a ir todos los assets (imágenes) adicionales, de prueba y demás como lo son partículas, o imágenes de temporalidades dentro del game
 
 porfa colocar los nombres de las adiciones aca para no estar buscándolos por todos lados
+
+assets == carpeta de assets de pruebas (videotutorial de YouTube)
+PixelOffice == carpeta de assets de alfa (assets descargados de internet para mirar como armar el jueguito)

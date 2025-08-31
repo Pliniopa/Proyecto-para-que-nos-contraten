@@ -1,8 +1,29 @@
 
-body {
-background-color: #063b6a2f;
+body { /* color de fondo */
+  margin: 0;
+/*  height: 100vh;
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+/* align-items: center;     /* Centra verticalmente */
+
+  background-color: #063b6a2f;
 }
 
-.titulo {  background-color: #6a0626;
+
+
+.titulo { /* color de titulo */
+   background-color: #6a0626;
 
   padding: 10px;
+}
+
+
+
+/*.cuerpo1 {/* centrar el canva (.js) */
+/*  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;  /* Ocupa toda la altura de la ventana */
+/* background-color: #f0f0f0; /* Opcional, para ver el área */
+/*}/*
+
