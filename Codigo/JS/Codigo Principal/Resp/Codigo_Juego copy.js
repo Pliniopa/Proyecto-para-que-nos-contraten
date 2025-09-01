@@ -1,6 +1,6 @@
 //variables de configuracion del juego
 
-import { assetfond, assetPlataforma, assetStar, assetBomb, assetDude, xa, ya, xb, yb, xc, yc, xd, yd, xe, ye, xj, yj, framer1, reb1, grav, velj1, velj2, text1 } from './Variables.js';
+import { assetfond, assetPlataforma, assetStar, assetBomb, assetDude, xa, ya, xb, yb, xc, yc, xd, yd, xe, ye, xj, yj, framer1, reb1, grav, velj1, velj2, text1 } from '../Variables.js';
 let plataform, player, cursors, stars;
 
 //const Phaser = require("phaser"); //llama a la libreria phaser
@@ -11,7 +11,10 @@ var config = {
     height: 600,
     physics: { // creacion de fisicas de juego
         default: 'arcade',
-
+        arcade: {
+            gravity: { y: 300 },
+            debug: false
+        }
     },
 
     scene : {
@@ -26,7 +29,7 @@ var config = {
 var score = 0;
 var scoreText;
 var bombs;
-
+var gameOver = false;
 
 
 
@@ -98,7 +101,7 @@ function create() {
 
 
     cursors = this.input.keyboard.createCursorKeys(); //captura de las flechas del teclado
-/*
+
     stars = this.physics.add.group({ //creacion de grupo de estrellas
         key: 'star', //nombre interno del asset
         repeat: 11, //numero de repeticiones
@@ -113,7 +116,7 @@ function create() {
 
 
     this.physics.add.overlap(player, stars, collectStar, null, true); //solapa entre el jugador y las estrellas
-*/
+
 
 
     scoreText = this.add.text(16, 16, text1 + 0, { fontSize: '32px', fill: '#000' }); //texto de puntuacion
@@ -136,41 +139,30 @@ function create() {
 
 function update() {
 
-    if (cursors.left.isDown ) //si se presiona la flecha izquierda
+    if (cursors.left.isDown) //si se presiona la flecha izquierda
     {
-        
-            player.setVelocityX(-velj1); //velocidad del jugador en x negativa (izquierda)    
-            player.anims.play('left', true); //reproduce la animacion de izquierda
-    
+        player.setVelocityX(-velj1); //velocidad del jugador en x negativa (izquierda)    
+        player.anims.play('left', true); //reproduce la animacion de izquierda
     }
-    else if (cursors.right.isDown) //si se presiona la flecha izquierda
+    else
+    if (cursors.right.isDown) //si se presiona la flecha izquierda
     {
         player.setVelocityX(velj1); //velocidad del jugador en x negativa (izquierda)    
         player.anims.play('right', true); //reproduce la animacion de izquierda
 
     }
-
-    else if(cursors.up.isDown){
-            player.setVelocityY(-velj1); //velocidad del jugador en x negativa (izquierda)    
-            player.anims.play('left', true); //reproduce la animacion de izquierda
-        }
-
-    else if(cursors.down.isDown){
-            player.setVelocityY(velj1); //velocidad del jugador en x negativa (izquierda)    
-            player.anims.play('left', true); //reproduce la animacion de izquierda
-        }
-
-    
-
     else
     {
         player.setVelocityX(0); //velocidad del jugador en x negativa (izquierda)    
-        player.setVelocityY(0); //velocidad del jugador en x negativa (izquierda)    
         player.anims.play('turn'); //reproduce la animacion de izquierda
-    
     }
 
 
+
+    if (cursors.up.isDown && player.body.touching.down) //si se presiona la flecha arriba y el jugador esta tocando el suelo
+    {
+        player.setVelocityY(-velj2); //velocidad del jugador en y negativa (arriba)    
+    }
 
    
 }
@@ -191,5 +183,3 @@ function collectStar (player, star)
         player.anims.play('turn'); //reproduce la animacion de giro
         gameOver = true; //fin del juego
     }
-
-    
