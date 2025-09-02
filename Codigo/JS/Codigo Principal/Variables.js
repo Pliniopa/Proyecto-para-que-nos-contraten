@@ -1,7 +1,7 @@
 
 // assets
 
-export const assetfond = 'Assets/adicionales/assets/sky.png'; //ruta de los assets
+export const assetfond = 'Assets/Esc/Esc_1/Esc1.png'; //ruta de los assets
 export const assetPlataforma = 'Assets/adicionales/assets/platform.png';
 export const assetStar = 'Assets/adicionales/assets/star.png';
 export const assetBomb = 'Assets/adicionales/assets/bomb.png';
@@ -9,8 +9,8 @@ export const assetDude = 'Assets/adicionales/assets/dude.png';
 
 // parametros de visualizacion (centrado de fondo)
 
-export const xa = 400; //ancho
-export const ya = 300; //alto
+export const xa = 450; //ancho
+export const ya = 350; //alto
 
 // parametros de las plataformas
 // base

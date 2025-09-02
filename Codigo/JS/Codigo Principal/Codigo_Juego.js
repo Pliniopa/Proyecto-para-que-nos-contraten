@@ -51,13 +51,13 @@ function create() {
     this.add.image(xa, ya, "fondo"); // mostrar imagen de fondo en el navegador
    
     plataform = this.physics.add.staticGroup(); //agrega un grupo de plataformas estaticas (no se mueven)
-    plataform.create(xb, yb, 'Plataforma').setScale(2).refreshBody(); //crea la plataforma en la posicion indicada y la escala al doble de su tamaño original
+   // plataform.create(xb, yb, 'Plataforma').setScale(2).refreshBody(); //crea la plataforma en la posicion indicada y la escala al doble de su tamaño original
     //         crea_plataforma, pos_x, pos_y, nombre interno del asset, escala de la imagen, refresca el cuerpo fisico
 
 
-    plataform.create(xc, yc, 'Plataforma') //crea la plataforma en la posicion indicada y la escala al doble de su tamaño original
-    plataform.create(xd, yd, 'Plataforma') //crea la plataforma en la posicion indicada y la escala al doble de su tamaño original
-    plataform.create(xe, ye, 'Plataforma') //crea la plataforma en la posicion indicada y la escala al doble de su tamaño original
+   // plataform.create(xc, yc, 'Plataforma') //crea la plataforma en la posicion indicada y la escala al doble de su tamaño original
+  //  plataform.create(xd, yd, 'Plataforma') //crea la plataforma en la posicion indicada y la escala al doble de su tamaño original
+//    plataform.create(xe, ye, 'Plataforma') //crea la plataforma en la posicion indicada y la escala al doble de su tamaño original
 
     player = this.physics.add.sprite(xj, yj, 'dude'); //agrega al jugador
 //               crea_jugador, pos_x, pos_y, nombre interno del asset
